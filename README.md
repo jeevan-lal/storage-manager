@@ -22,14 +22,6 @@ A modern and sleek Chrome extension for managing browser storage data including 
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install-blue?logo=google-chrome)](https://chromewebstore.google.com/detail/storage-manager/kgcblbnojlegbfkkidmhajjippfbokcb)
 
-### 📥 Manual Installation
-
-1. 📦 Download the extension from [GitHub Releases](https://github.com/jeevan-lal/storage-manager/releases)
-2. 📁 Extract the ZIP file
-3. 🌐 Open Chrome and go to `chrome://extensions/`
-4. ⚙️ Enable "Developer mode"
-5. 📂 Click "Load unpacked" and select the extracted folder
-
 ## 🛠️ Development
 
 ### 📋 Prerequisites
