@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { X, Database, List, Shield } from 'lucide-vue-next'
+import { X, Database, List, Shield, Github, ExternalLink } from 'lucide-vue-next'
 
 interface Props {
   onClose: () => void
 }
 
 defineProps<Props>()
+
+const openLink = (url: string) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -45,6 +49,22 @@ defineProps<Props>()
           <Shield :size="16" /> Privacy & Security
         </h4>
         <p>This extension only accesses storage data from the currently active tab. No data is sent to external servers.</p>
+      </div>
+
+      <div class="info-section">
+        <h4>
+          <Github :size="16" /> Links & Resources
+        </h4>
+        <div class="links-container">
+          <button @click="openLink('https://github.com/jeevan-lal/storage-manager')" class="link-btn github-btn">
+            <Github :size="16" />
+            View on GitHub
+          </button>
+          <button @click="openLink('https://chromewebstore.google.com/detail/storage-manager/kgcblbnojlegbfkkidmhajjippfbokcb')" class="link-btn chrome-btn">
+            <ExternalLink :size="16" />
+            Chrome Web Store
+          </button>
+        </div>
       </div>
     </div>
   </div>
