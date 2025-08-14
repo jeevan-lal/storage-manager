@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "Storage Manager"
+  },
+  "description": {
+    "message": "A modern and sleek Chrome extension for managing browser storage data"
+  },
+  "appName": {
+    "message": "Storage Manager"
+  },
+  "appShortName": {
+    "message": "Storage Manager"
+  },
+  "appDescription": {
+    "message": "A modern and sleek Chrome extension for managing browser storage data"
+  }
+}

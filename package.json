@@ -1,0 +1,53 @@
+{
+  "name": "storage-manager",
+  "version": "1.0.2",
+  "scripts": {
+    "watch:chrome": "env-cmd -e dev,chrome,3,stable,offline vite build --mode development --watch",
+    "watch:chrome:encode": "env-cmd -e dev,chrome,3,stable,offline,encode vite build --mode development --watch",
+    "build:chrome": "env-cmd -e prod,chrome,3,stable,offline vite build --mode production",
+    "zip:chrome": "npm run build:chrome && env-cmd -e chrome,3,stable node utils/zip.js",
+    "watch:firefox": "env-cmd -e dev,firefox,3,stable,offline vite build --mode development --watch --config utils/watch.js",
+    "watch:firefox:encode": "env-cmd -e dev,firefox,3,stable,offline,encode vite build --mode development --watch --config utils/watch.js",
+    "build:firefox": "env-cmd -e prod,firefox,3,stable,offline vite build --mode production --config utils/build.js",
+    "zip:firefox": "npm run build:firefox && env-cmd -e firefox,3,stable node utils/zip.js",
+    "watch:edge": "env-cmd -e dev,edge,3,stable,offline vite build --mode development --watch --config utils/watch.js",
+    "watch:edge:encode": "env-cmd -e dev,edge,3,stable,offline,encode vite build --mode development --watch --config utils/watch.js",
+    "build:edge": "env-cmd -e prod,edge,3,stable,offline vite build --mode production --config utils/build.js",
+    "zip:edge": "npm run build:edge && env-cmd -e edge,3,stable node utils/zip.js",
+    "watch:opera": "env-cmd -e dev,opera,3,stable,offline vite build --mode development --watch --config utils/watch.js",
+    "watch:opera:encode": "env-cmd -e dev,opera,3,stable,offline,encode vite build --mode development --watch --config utils/watch.js",
+    "build:opera": "env-cmd -e prod,opera,3,stable,offline vite build --mode production --config utils/build.js",
+    "zip:opera": "npm run build:opera && env-cmd -e opera,3,stable node utils/zip.js",
+    "publish": "npm run build:chrome && node utils/publish.js"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jeevan Lal"
+  },
+  "dependencies": {
+    "@ctechhindi/core-browser-extension": "file:../../Javascript/_lib/core-browser-extension",
+    "@ctechhindi/tiny-js-library": "file:../../Javascript/_lib/tiny-js-library",
+    "@ctechhindi/vue3-json-viewer": "file:../../Vue3/_Lib/json-viewer",
+    "@preact/preset-vite": "^2.10.2",
+    "archiver": "^5.3.2",
+    "del": "^6.1.1",
+    "env-cmd": "^10.1.0",
+    "halfmoon": "^2.0.1",
+    "idb": "^8.0.3",
+    "lucide-vue-next": "^0.539.0",
+    "pinia": "^2.1.7",
+    "rollup-plugin-copy": "^3.5.0",
+    "tailwindcss": "^3.4.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "terser": "^5.22.0",
+    "typescript": "^5.3.0",
+    "vite": "^7.1.2",
+    "vue-tsc": "^2.0.0"
+  }
+}

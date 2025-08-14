@@ -1,0 +1,75 @@
+/* Notification animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* FontAwesome spin animation (legacy support) */
+.fa-spin {
+  animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lucide icon styling */
+.loading-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty-icon {
+  opacity: 0.6;
+}
+
+/* Ensure icons have consistent sizing */
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-trigger svg {
+  width: 14px;
+  height: 14px;
+}
